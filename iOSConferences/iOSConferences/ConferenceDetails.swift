@@ -1,11 +1,3 @@
-//
-//  ConferenceDetails.swift
-//  iOSConferences
-//
-//  Created by LACY on 2021/06/07.
-//
-//
-
 import SwiftUI
 
 struct ConferenceDetails: View {

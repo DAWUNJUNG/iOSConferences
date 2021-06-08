@@ -10,15 +10,30 @@ import SwiftUI
 
 struct ConferenceList: View {
     var body: some View {
-        NavigationView {
-            List(conferencesData) { conference in
-                NavigationLink(destination: ConferenceDetails(conference: conference)) {
+        TabView {
+            NavigationView {
+                List(menuData) { category in
                     VStack(alignment: .leading) {
-                        Text(conference.name).font(.headline)
-                        Text(conference.location).font(.subheadline)
+                            Text(category).font(.headline)
+                        }
+                }.navigationBarTitle("메뉴 추첨")
+            }.tabItem {
+                Image(systemName: "filemenu.and.selection")
+                Text("메뉴")
+            }
+            NavigationView {
+                List(conferencesData) { conference in
+                    NavigationLink(destination: ConferenceDetails(conference: conference)) {
+                        VStack(alignment: .leading) {
+                            Text(conference.name).font(.headline)
+                            Text(conference.location).font(.subheadline)
+                        }
                     }
-                }
-            }.navigationBarTitle("Conferences")
+                }.navigationBarTitle("식당 추첨")
+            }.tabItem {
+                Image(systemName: "house.circle")
+                Text("식당")
+            }
         }
     }
 }
