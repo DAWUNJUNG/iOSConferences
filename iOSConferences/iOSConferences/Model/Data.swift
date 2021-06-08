@@ -5,7 +5,6 @@
 import Foundation
 
 let conferencesData: [Conference] = loadFile("conferencesData.json")
-let menuData: [menu] = loadFile("menu.json")
 
 func loadFile<T: Decodable>(_ filename: String) -> T {
     let data: Data

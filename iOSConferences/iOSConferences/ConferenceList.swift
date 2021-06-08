@@ -12,10 +12,13 @@ struct ConferenceList: View {
     var body: some View {
         TabView {
             NavigationView {
-                List(menuData) { category in
-                    VStack(alignment: .leading) {
-                            Text(category).font(.headline)
+                List(conferencesData) { conference in
+                    NavigationLink(destination: ConferenceDetails(conference: conference)) {
+                        VStack(alignment: .leading) {
+                            Text(conference.name).font(.headline)
+                            Text(conference.location).font(.subheadline)
                         }
+                    }
                 }.navigationBarTitle("메뉴 추첨")
             }.tabItem {
                 Image(systemName: "filemenu.and.selection")
