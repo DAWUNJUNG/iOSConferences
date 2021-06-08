@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ConferenceList: View {
+
     var body: some View {
         TabView {
             NavigationView {
