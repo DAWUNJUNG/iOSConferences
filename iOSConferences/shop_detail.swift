@@ -10,17 +10,11 @@ struct shop_details_all: View {
 
     var body: some View {
         List {
-            VStack() {
-                Text("식당이름")
+            VStack(alignment: .leading) {
+                Text(shop_name)
             }
-            VStack() {
-                Text("대표메뉴1")
-            }
-            VStack() {
-                Text("대표메뉴2")
-            }
-            VStack() {
-                Text("대표메뉴3")
+            ForEach(menu_arr, id: \.self) { menu_name in
+                Text(menu_name)
             }
         }.navigationBarTitle("식당 추첨 결과")
     }

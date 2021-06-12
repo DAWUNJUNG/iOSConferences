@@ -28,7 +28,7 @@ func requestPost2(url: String, method: String, param: [String: Any], completionH
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     request.httpBody = sendData
 
-    URLSession.shared.dataTask(with: request) { (data, response, error) in
+    URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
         guard error == nil else {
             print("Error: error calling GET")
             print(error!)
@@ -38,7 +38,7 @@ func requestPost2(url: String, method: String, param: [String: Any], completionH
             print("Error: Did not receive data")
             return
         }
-        guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+        guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
             print("Error: HTTP request failed")
             return
         }
@@ -46,9 +46,11 @@ func requestPost2(url: String, method: String, param: [String: Any], completionH
             print("Error: JSON Data Parsing failed")
             return
         }
-        completionHandler(true, output.best_menu)
-        completionHandler(true, output.shop_name)
-    }.resume()
+        var test = Array<String>()
+        test.append(output.shop_name)
+        test.append(contentsOf: output.best_menu)
+        completionHandler(true, test)
+    }).resume()
 }
 
 /* Body가 있는 요청 */
