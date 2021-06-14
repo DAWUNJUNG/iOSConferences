@@ -128,7 +128,7 @@ struct ConferenceList: View {
                     NavigationLink("한식", destination:
                     shop_details_all(menu_arr: $best_menu, shop_name: $shop_name)
                             .onAppear {
-                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "전체"]) { (success, data) in
+                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "한식"]) { (success, data) in
                                     get_data.removeAll()
                                     shop_name = ""
                                     best_menu.removeAll()
@@ -141,7 +141,7 @@ struct ConferenceList: View {
                     NavigationLink("일식", destination:
                     shop_details_all(menu_arr: $best_menu, shop_name: $shop_name)
                             .onAppear {
-                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "전체"]) { (success, data) in
+                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "일식"]) { (success, data) in
                                     get_data.removeAll()
                                     shop_name = ""
                                     best_menu.removeAll()
@@ -154,7 +154,7 @@ struct ConferenceList: View {
                     NavigationLink("중식", destination:
                     shop_details_all(menu_arr: $best_menu, shop_name: $shop_name)
                             .onAppear {
-                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "전체"]) { (success, data) in
+                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "중식"]) { (success, data) in
                                     get_data.removeAll()
                                     shop_name = ""
                                     best_menu.removeAll()
@@ -167,7 +167,7 @@ struct ConferenceList: View {
                     NavigationLink("아시아_양식", destination:
                     shop_details_all(menu_arr: $best_menu, shop_name: $shop_name)
                             .onAppear {
-                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "전체"]) { (success, data) in
+                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "아시아_양식"]) { (success, data) in
                                     get_data.removeAll()
                                     shop_name = ""
                                     best_menu.removeAll()
@@ -180,7 +180,7 @@ struct ConferenceList: View {
                     NavigationLink("분식", destination:
                     shop_details_all(menu_arr: $best_menu, shop_name: $shop_name)
                             .onAppear {
-                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "전체"]) { (success, data) in
+                                request2("http://lacy.co.kr:39211/api/shop_picker", "POST", ["type": "분식"]) { (success, data) in
                                     get_data.removeAll()
                                     shop_name = ""
                                     best_menu.removeAll()
