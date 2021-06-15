@@ -29,7 +29,7 @@
 		4E9F298DD62507CC33B5DB16 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		4E9F29E4A1B3634130765D52 /* conferencesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conferencesData.json; sourceTree = "<group>"; };
 		4E9F2AC33894F331E9D650A0 /* ConferenceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetails.swift; sourceTree = "<group>"; };
-		4E9F2C43EDA04236EF3C4F12 /* iOSConferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConferences.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E9F2C43EDA04236EF3C4F12 /* 오늘 뭐 먹지?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "오늘 뭐 먹지?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9F2D0D42607385FD1B996A /* shop_request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shop_request.swift; sourceTree = "<group>"; };
 		4E9F2E04673F831F09F5746D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		4E9F2E7247D12B7AA4963D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		4E9F241732A84AD5839CAF8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E9F2C43EDA04236EF3C4F12 /* iOSConferences.app */,
+				4E9F2C43EDA04236EF3C4F12 /* 오늘 뭐 먹지?.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,9 +109,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E9F2A43AD1FFA5B8909D14A /* iOSConferences */ = {
+		4E9F2A43AD1FFA5B8909D14A /* 오늘 뭐 먹지? */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E9F282E59911BC2A6FBB836 /* Build configuration list for PBXNativeTarget "iOSConferences" */;
+			buildConfigurationList = 4E9F282E59911BC2A6FBB836 /* Build configuration list for PBXNativeTarget "오늘 뭐 먹지?" */;
 			buildPhases = (
 				4E9F24CF502468121A215955 /* Sources */,
 				4E9F2CDEE804F2AF895BF2B4 /* Frameworks */,
@@ -121,9 +121,9 @@
 			);
 			dependencies = (
 			);
-			name = iOSConferences;
+			name = "오늘 뭐 먹지?";
 			productName = iOSConferences;
-			productReference = 4E9F2C43EDA04236EF3C4F12 /* iOSConferences.app */;
+			productReference = 4E9F2C43EDA04236EF3C4F12 /* 오늘 뭐 먹지?.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,11 +131,19 @@
 /* Begin PBXProject section */
 		4E9F27FBF02AEA44A4100338 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					4E9F2A43AD1FFA5B8909D14A = {
+						DevelopmentTeam = YS57T69HW9;
+					};
+				};
+			};
 			buildConfigurationList = 4E9F20C514370BC29E0E7816 /* Build configuration list for PBXProject "iOSConferences" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 4E9F22C31798B419A4854EA1;
@@ -143,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E9F2A43AD1FFA5B8909D14A /* iOSConferences */,
+				4E9F2A43AD1FFA5B8909D14A /* 오늘 뭐 먹지? */,
 			);
 		};
 /* End PBXProject section */
@@ -235,9 +243,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"\"-Xlinker -interposable\"",
-				);
+				OTHER_LDFLAGS = "\"-Xlinker -interposable\"";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -292,12 +298,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = (
-					"\"-Xlinker -interposable\"",
-				);
+				OTHER_LDFLAGS = "\"-Xlinker -interposable\"";
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -308,6 +311,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSConferences/Preview Content\"";
+				DEVELOPMENT_TEAM = YS57T69HW9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOSConferences/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -325,6 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSConferences/Preview Content\"";
+				DEVELOPMENT_TEAM = YS57T69HW9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOSConferences/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -348,13 +353,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E9F282E59911BC2A6FBB836 /* Build configuration list for PBXNativeTarget "iOSConferences" */ = {
+		4E9F282E59911BC2A6FBB836 /* Build configuration list for PBXNativeTarget "오늘 뭐 먹지?" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E9F2EC2F02A296BAE19990D /* Debug */,
 				4E9F2BF28DC0D28F0FBCAE29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
